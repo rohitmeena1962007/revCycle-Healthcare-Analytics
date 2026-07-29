@@ -1,0 +1,127 @@
+{
+  "claims": 120000,
+  "denied_claims": 33664,
+  "denial_rate": 0.28053333333333336,
+  "split_counts": {
+    "train": 84051,
+    "validation": 18018,
+    "test": 17931
+  },
+  "test_roc_auc": 0.6302391154962118,
+  "test_precision_at_validation_threshold": 0.31943416399374946,
+  "test_recall_at_validation_threshold": 0.7612700901607213,
+  "test_f1_at_validation_threshold": 0.45003186373906495,
+  "test_brier_score": 0.17556640467216372,
+  "validation_selected_threshold": 0.22500000000000003,
+  "total_claim_exposure_usd": 266829762.19,
+  "total_revenue_at_risk_usd": 74914762.88193098,
+  "actual_denied_billed_dollars_usd": 74132368.07,
+  "top_20pct_capture_of_denied_billed_dollars": 0.33308475329810144,
+  "prior_auth_gap_claims": 7492,
+  "prior_auth_gap_rate": 0.062433333333333334,
+  "denial_rate_with_prior_auth_gap": 0.708756006406834,
+  "denial_rate_without_prior_auth_gap": 0.25201763430156077,
+  "documentation_completeness_single_feature_test_auc_diagnostic": 0.9776244860516216,
+  "model_features": [
+    "prior_auth_gap_flag",
+    "prior_auth_obtained_flag",
+    "claim_amount_log1p",
+    "payer_group",
+    "provider_specialty",
+    "cpt_code_risk_tier",
+    "modifier_present",
+    "auth_lead_time_days"
+  ],
+  "excluded_from_model": [
+    "documentation_completeness",
+    "outcome",
+    "denial_reason_code",
+    "denial_category",
+    "denial_labels appeal/recovery fields",
+    "synthetic_flag",
+    "generation_date"
+  ],
+  "risk_deciles": [
+    {
+      "risk_decile_num": 1,
+      "claim_count": 12000,
+      "denied_claims": 2564,
+      "denied_billed_dollars": 10743165.12,
+      "modeled_revenue_at_risk": 10832742.712817242,
+      "avg_predicted_pd": 0.20312168856737287
+    },
+    {
+      "risk_decile_num": 2,
+      "claim_count": 12000,
+      "denied_claims": 2547,
+      "denied_billed_dollars": 11158895.11,
+      "modeled_revenue_at_risk": 11522790.65528908,
+      "avg_predicted_pd": 0.21304325343904912
+    },
+    {
+      "risk_decile_num": 3,
+      "claim_count": 12000,
+      "denied_claims": 2449,
+      "denied_billed_dollars": 6740299.53,
+      "modeled_revenue_at_risk": 7174653.348003126,
+      "avg_predicted_pd": 0.2201218444923197
+    },
+    {
+      "risk_decile_num": 4,
+      "claim_count": 12000,
+      "denied_claims": 2743,
+      "denied_billed_dollars": 6539000.15,
+      "modeled_revenue_at_risk": 6458397.683823872,
+      "avg_predicted_pd": 0.22685968517615254
+    },
+    {
+      "risk_decile_num": 5,
+      "claim_count": 12000,
+      "denied_claims": 2913,
+      "denied_billed_dollars": 4932675.89,
+      "modeled_revenue_at_risk": 4678272.340481586,
+      "avg_predicted_pd": 0.23179287876062016
+    },
+    {
+      "risk_decile_num": 6,
+      "claim_count": 12000,
+      "denied_claims": 2879,
+      "denied_billed_dollars": 3841592.62,
+      "modeled_revenue_at_risk": 3828791.4387639957,
+      "avg_predicted_pd": 0.2347417326175986
+    },
+    {
+      "risk_decile_num": 7,
+      "claim_count": 12000,
+      "denied_claims": 2835,
+      "denied_billed_dollars": 3183374.92,
+      "modeled_revenue_at_risk": 3326658.4784252034,
+      "avg_predicted_pd": 0.23761154914346166
+    },
+    {
+      "risk_decile_num": 8,
+      "claim_count": 12000,
+      "denied_claims": 2864,
+      "denied_billed_dollars": 2301003.2,
+      "modeled_revenue_at_risk": 2270596.984630695,
+      "avg_predicted_pd": 0.24164438019250065
+    },
+    {
+      "risk_decile_num": 9,
+      "claim_count": 12000,
+      "denied_claims": 2930,
+      "denied_billed_dollars": 1583015.86,
+      "modeled_revenue_at_risk": 1611266.6194374629,
+      "avg_predicted_pd": 0.24885938563413573
+    },
+    {
+      "risk_decile_num": 10,
+      "claim_count": 12000,
+      "denied_claims": 8940,
+      "denied_billed_dollars": 23109345.67,
+      "modeled_revenue_at_risk": 23210592.62025871,
+      "avg_predicted_pd": 0.7483031976832143
+    }
+  ],
+  "notebook_execution": "success"
+}

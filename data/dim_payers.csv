@@ -1,0 +1,7 @@
+payer_id,payer_name,payer_type,timely_filing_limit_days,prior_auth_strictness
+PAY001,Commercial_EPO,Commercial,180.0,0.2857142857142857
+PAY002,Commercial_HMO,Commercial,180.0,1.0
+PAY003,Commercial_PPO,Commercial,180.0,0.2857142857142857
+PAY004,Medicaid_Managed,Medicaid,180.0,0.2857142857142857
+PAY005,Medicare_Advantage,Medicare,180.0,1.0
+PAY006,Medicare_FFS,Medicare,180.0,0.2857142857142857

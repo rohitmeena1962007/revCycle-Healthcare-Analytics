@@ -1,0 +1,29 @@
+-- Import revcycle_powerbi_ready.csv and rename the table to RevCycle.
+Total Claims = DISTINCTCOUNT(RevCycle[claim_id])
+
+Denial Rate % =
+DIVIDE(SUM(RevCycle[denial_flag]), [Total Claims], 0)
+
+Total Billed Amount =
+SUM(RevCycle[claim_amount_usd])
+
+Total Revenue at Risk $ =
+SUM(RevCycle[revenue_at_risk_usd])
+
+High-Risk Segment Capture % =
+DIVIDE(
+    CALCULATE(
+        SUM(RevCycle[claim_amount_usd]),
+        RevCycle[denial_flag] = 1,
+        RevCycle[risk_decile_label] IN {"Decile 9", "Decile 10"}
+    ),
+    CALCULATE(SUM(RevCycle[claim_amount_usd]), RevCycle[denial_flag] = 1),
+    0
+)
+
+Prior Auth Gap Denial Rate % =
+DIVIDE(
+    CALCULATE(SUM(RevCycle[denial_flag]), RevCycle[prior_auth_gap_flag] = 1),
+    CALCULATE([Total Claims], RevCycle[prior_auth_gap_flag] = 1),
+    0
+)
